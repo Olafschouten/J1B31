@@ -1,0 +1,66 @@
+.morning {
+    background-image: url(img/morning.png);
+}
+
+.afternoon {
+    background-image: url(img/afternoon.png);
+}
+
+.evening {
+    background-image: url(img/evening.png);
+}
+
+.night {
+    background-image: url(img/night.png);
+}
+
+.container h1, .container h2 {
+    font-family: 'Lucida Calligraphy';
+    position: relative;
+    top: 300px;
+    left: 35%;
+    color: black;
+}
+
+.container p {
+    font-family: 'Lucida Calligraphy';
+    position: relative;
+    top: 300px;
+    left: 35%;
+    color: black;
+}
+
+.nav {
+    margin: 0 auto;
+    height: 58px;
+    width: 900px;
+    background-color: rgb(100, 150, 231);
+    border-radius: 15px;
+}
+
+.nav a {
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(60, 184, 184);
+    border-radius: 5px;
+    color: black;
+}
+
+.nav a:hover {
+    background-color: darkcyan;
+    color: aquamarine;
+}
+
+footer {
+    position: relative;
+    top: 870px;
+    height: 25px;
+    width: 100%;
+    background-color: gainsboro;
+}
+
+.footer footer {
+    right: 300px;
+}
