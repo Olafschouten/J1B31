@@ -1,5 +1,7 @@
 .morning {
     background-image: url(img/morning.png);
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
 }
 
 .afternoon {
@@ -14,12 +16,17 @@
     background-image: url(img/night.png);
 }
 
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
 .container h1, .container h2 {
     font-family: 'Lucida Calligraphy';
     position: relative;
     top: 300px;
-    left: 35%;
-    color: black;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .container p {
@@ -33,9 +40,9 @@
 .nav {
     margin: 0 auto;
     height: 58px;
-    width: 900px;
-    background-color: rgb(100, 150, 231);
-    border-radius: 15px;
+    width: 320px;
+    background-color: rgb(255, 231, 231);
+    border-radius: 0 0 15px 15px;
 }
 
 .nav a {
@@ -49,18 +56,18 @@
 }
 
 .nav a:hover {
-    background-color: darkcyan;
-    color: aquamarine;
+    background-color: rgb(0, 139, 139);
+    color: white;
 }
 
 footer {
-    position: relative;
-    top: 870px;
-    height: 25px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    background-color: gainsboro;
+    background-color: rgb(207, 204, 204);
 }
 
-.footer footer {
-    right: 300px;
+.foot {
+    text-align: center;
 }

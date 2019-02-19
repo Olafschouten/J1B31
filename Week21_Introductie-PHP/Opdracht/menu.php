@@ -3,10 +3,9 @@
 </div>
 
 <div class="nav">
-    <a href="#">Home</a>
-    <a href="labs.php">Labs</a>
-    <a href="opdracht.php">opdracht</a>
-    <a href="lab1.php">Lab 1</a>
+    <a href="opdracht.php">Home/Opdracht</a>
+    <a href="lab2.php">Lab 2</a>
+    <a href="lab3.php">Lab 3</a>
 </div>
 
-<footer>© Olaf Schouten</footer>
+<footer class="foot" >© Olaf Schouten</footer>

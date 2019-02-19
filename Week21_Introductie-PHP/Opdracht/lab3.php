@@ -1,40 +1,9 @@
 <link rel="stylesheet" href="style.css">
 
-<body>
-    <?php
-    include 'menu.php';
+<?php
+include 'menu.php';
 
-    echo "<h1>Hello World!</h1>";
-
-    $array = ["<br>Learning PHP", "<br>Hello", " World!"];
-    echo $array[0];
-
-    echo "<br>";
-
-    define("test", "$array[1]");
-    echo test;
-
-    echo "<br>";
-
-    foreach($array as $value){
-        echo $value;
-    }
-
-    echo "<br>";
-
-    $word1 = "<h1>Hello</h1>";
-    $word2 = "<h1> World!</h1>";
-    echo $word1, $word2;
-
-    echo "<br>";
-
-    $array1 = ["Hello", " World!"];
-
-    foreach($array1 as $value){
-        echo $value;
-    }
-
-    // --------- lab 3a --------- //
+// --------- lab 3a --------- //
     echo "<br><br>Lab3a";
 
     $randGetal = rand(1,10);
@@ -67,7 +36,7 @@
             $randGetal2++;
         }
     }
-    
+
     // --------- lab 3b.3 --------- //
     echo "<br><br><h1>Lab3b.3</h1>";
 
@@ -79,9 +48,4 @@
         }
         echo '<br>';
     }
-
-    // --------- lab 4 --------- //
-    
-    
-    ?>
-</body>
+?>
