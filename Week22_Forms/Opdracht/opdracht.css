@@ -1,14 +1,16 @@
 body {
     background-color: rgb(80, 80, 80);
+    font-family: Archivo;
 }
 
 h1 {
     color: white;
     margin-left: 30%;
+    font-weight: bold;
 }
 
 p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Archivo;
     margin-left: 20px;
 }
 
@@ -17,8 +19,9 @@ p {
     width: 800px;
     background-color: white;
     position: relative;
-    top: 10%;
+    
     margin: 0 auto;
+    padding: 0px;
 }
 
 .container h2 {
@@ -43,11 +46,6 @@ p {
     top: 10px;
 }
 
-input {
-    float: right;
-    margin-right: 50px
-}
-
 .footer {
     position: relative;
     top: 20px;
@@ -64,4 +62,27 @@ input {
 
 .result {
     display: none;
+}
+
+.form-horizontal {
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-6 {
+        width: 40%;
+    }
+}
+
+p > input {
+    margin-right: 100px;
+}
+
+input {
+    margin: 0px;
+    float: right;
+}
+
+.footer > p {
+    padding-top: 10px;
 }

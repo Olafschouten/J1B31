@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <h1>Mad Libs</h1>
+    <h1>MAD LIBS</h1>
     <div class="container">
         <div class="nav">
             <a href="opdracht.html">Er heerst paniek...</a>
-            <a href="opdracht_onkunde.html">Onkunde</a>
+            <a href="#">Onkunde</a>
         </div>
 
         <?php
