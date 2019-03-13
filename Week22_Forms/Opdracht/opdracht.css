@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(80, 80, 80);
+}
+
+h1 {
+    color: white;
+    margin-left: 30%;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 20px;
+}
+
+.container {
+    height: auto;
+    width: 800px;
+    background-color: white;
+    position: relative;
+    top: 10%;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav {
+    width: 800px;
+    height: 45px;
+    background-color: rgb(151, 26, 26);
+}
+
+.nav a {
+    color: snow;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+    position: relative;
+    top: 10px;
+}
+
+input {
+    float: right;
+    margin-right: 50px
+}
+
+.footer {
+    position: relative;
+    top: 20px;
+    ;
+    height: 45px;
+    width: 800px;
+    background-color: darkslategray;
+}
+
+.footer p {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.result {
+    display: none;
+}
