@@ -24,8 +24,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Over mij</a>
-                <a class="nav-item nav-link" href="#">Foto's</a>
+                <a class="nav-item nav-link" href="#">About me</a>
+                <a class="nav-item nav-link" href="#">Photos</a>
                 <a class="nav-item nav-link" href="#">Contact</a>
             </div>
         </div>
@@ -62,7 +62,7 @@
     <div class="container">
 
         <div class="w3-content w3-container w3-padding-64" id="about">
-            <h1>Over mij</h1>
+            <h1>About me</h1>
             <hr>
             <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -92,9 +92,7 @@
                 </div>
             </div>
 
-
-
-            <h1>Foto's</h1>
+            <h1>Photos</h1>
             <hr>
             <div class="gallery" id="gallery">
                 <img class="img-fluid mb-3"
@@ -118,25 +116,23 @@
                 <img class="img-fluid mb-3" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
                     alt="Card image cap">
             </div>
-
         </div>
 
 
+
         <footer class="page-footer font-small blue pt-4">
-
             <div class="container-fluid text-center text-md-left">
-
                 <div class="row">
-
                     <div class="col-md-12 mt-md-0 mt-3">
-
                         <h1>Contact</h1>
                         <hr>
+
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email address</label>
                             <input type="email" class="form-control" id="exampleFormControlInput1"
                                 placeholder="name@example.com">
                         </div>
+
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Example textarea</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -145,35 +141,13 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <br>
                         <br>
-
-                    <!-- </div>
-
-                    <hr class="clearfix w-100 d-md-none pb-3">
-
-                    <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="text-uppercase">Links</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!">Link 1</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 4</a>
-                            </li>
-                        </ul> -->
                     </div>
                 </div>
             </div>
-
-            <div class="footer-copyright text-center py-3">© 2018 Copyright: Olaf Schouten
-            </div>
-
         </footer>
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2018 Copyright: Olaf Schouten</div>
 
 </body>
 

@@ -10,11 +10,7 @@
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
     column-width: 33%;
-    height: 900px;
-}
-
-.container {
-    padding-top: 60px;
+    height: 700px;
 }
 
 .page-footer{
