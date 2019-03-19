@@ -14,7 +14,6 @@
         date_default_timezone_set('Europe/Amsterdam');
         $uren = date("H");
         $minuten = date("i");
-        $seconden = date('s');
 
         
         if ($uren >= "6" && $uren < "12") {
@@ -38,7 +37,7 @@
         }
 
         echo '<h1>' , 'Good ' , $dagdelen , '</h1>';
-        echo '<h1>' , 'The time is ' , $uren , ":" , $minuten , ":" , $seconden , ' right now' , '</h1>';
+        echo '<h1>' , 'The time is ' , $uren , ":" , $minuten , ":" , ' right now' , '</h1>';
         ?>
     </div>
 </body>
