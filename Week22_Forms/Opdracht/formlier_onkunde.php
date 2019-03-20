@@ -28,6 +28,7 @@
         $data = htmlspecialchars($data);
         return $data;
     }
+
     $strings = ["kunnen", "persoon", "getal", "voorwerp", "eigenschap", "seigenschap", "overkomen"];
     $data = [];
     $dataErr = [];
@@ -50,11 +51,11 @@
             <form class="form-horizontal" action="formlier_onkunde.php" method="post">
 
                 <div class="form-group">
-                    <label class="col-sm-6" for="kunnen" style="margin-top: 5px">Wat zou je graag willen kunnen?</label>
+                    <label class="col-sm-6" name="kunnen" style="margin-top: 5px">Wat zou je graag willen
+                        kunnen?</label>
                     <span class="error">* <?php echo $dataErr["kunnen"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="kunnen" name="kunnen"
-                            value="<?php echo $data["kunnen"] ?>">
+                        <input type="text" class="form-control" name="kunnen" value="<?php echo $data["kunnen"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -141,6 +142,7 @@
         }
         ?>
         </div>
+
         <div class="footer">
             <p>Olaf Schouten ©</p>
         </div>

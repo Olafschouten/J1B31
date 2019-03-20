@@ -17,32 +17,7 @@
 
     <?php include 'menu.php'?>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img1.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img3.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+    <?php include 'carousel.php'?>
 
 
     <div class="container">
@@ -50,15 +25,10 @@
         <div class="w3-content w3-container w3-padding-64" id="about">
             <h1>About me</h1>
             <hr>
-            <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Ik ben Olaf Schouten ik ben 20 jaar oud en zit op het da Vinci college in Gorinchem.
+                Ik ben nu bezig met een opleiding applicatieontwikkelaar, ik ben goed in het gebruiken van html, css en bootstrap.
+                
+            </p>
             <div class="w3-row">
                 <div class="w3-col m6 w3-center w3-padding-large">
                     <p><b><i class="fa fa-user w3-margin-right"></i>Olaf Schouten</b></p><br>
@@ -105,7 +75,6 @@
             </div>
         </div>
 
-
         <a name="contact"></a>
         <footer class="page-footer font-small blue pt-4">
             <div class="container-fluid text-center text-md-left">
@@ -118,7 +87,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                            <input type="text" name="name" class="form-control"
+                                placeholder="Enter your first and second name" required>
                         </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -131,7 +101,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-at"></i></span>
                             </div>
-                            <input type="text" name="subject" class="form-control" placeholder="Enter subject" required>
+                            <input type="text" name="subject" class="form-control" placeholder="Phone number" required>
                         </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">

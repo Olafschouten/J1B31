@@ -1,1 +1,1 @@
-<div class="footer-copyright text-center py-3">© 2018 Copyright: Olaf Schouten</div>
+<div class="footer-copyright text-center py-3">© 2019 Copyright: Olaf Schouten</div>

@@ -12,7 +12,7 @@
         include 'menu.php';
         
         date_default_timezone_set('Europe/Amsterdam');
-        $uren = date("H");
+        $uren = date("H")+10;
         $minuten = date("i");
 
         
@@ -26,7 +26,7 @@
             $dagdelen = 'afternoon';
         }
         
-        elseif ($uren >= "18" && $uren < "00") {
+        elseif ($uren >= "18" && $uren < "24") {
             echo '<body class="evening">';
             $dagdelen = 'evening';
         }
