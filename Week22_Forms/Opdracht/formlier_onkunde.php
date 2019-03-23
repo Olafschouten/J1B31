@@ -51,7 +51,7 @@
             <form class="form-horizontal" action="formlier_onkunde.php" method="post">
 
                 <div class="form-group">
-                    <label class="col-sm-6" name="kunnen" style="margin-top: 5px">Wat zou je graag willen
+                    <label class="col-sm-6" for="kunnen" style="margin-top: 5px">Wat zou je graag willen
                         kunnen?</label>
                     <span class="error">* <?php echo $dataErr["kunnen"]?></span>
                     <div class="col-sm-6">
@@ -129,9 +129,10 @@
             if ($canProcess) {
                 echo
                 "<script>
-            document.getElementById('content').style.display = 'none';
-            document.getElementById('result').style.display = 'block';
-            </script>";
+                document.getElementById('content').style.display = 'none';
+                document.getElementById('result').style.display = 'block';
+                </script>";
+            
                 echo "Er zij veel mensen die niet kunnen " . $data["kunnen"] . ". " .
                     "Neem nou " . $data["persoon"] . ". " .
                     "Zelfs met de hulp van een " . $data["voorwerp"] . " of zelfs tien kan " . $data["persoon"] . " niet " . $data["kunnen"] . ". " .

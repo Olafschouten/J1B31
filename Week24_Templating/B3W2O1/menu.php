@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#aboutme">About me</a>
-            <a class="nav-item nav-link" href="#photos">Photos</a>
+            <a class="nav-item nav-link" href="#aboutme">Over mij</a>
+            <a class="nav-item nav-link" href="#project">Projecten</a>
             <a class="nav-item nav-link" href="#contact">Contact</a>
         </div>
     </div>

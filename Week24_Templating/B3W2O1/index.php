@@ -26,7 +26,7 @@
     <div class="container">
         <a name="aboutme"></a>
         <div class="w3-content w3-container w3-padding-64" id="about">
-            <h1>About me</h1>
+            <h1>Over mij</h1>
             <hr>
             <p>Ik ben Olaf Schouten ik ben 20 jaar oud en zit op het da Vinci college in Gorinchem.
                 Ik ben nu bezig met een opleiding <a href="#">applicatieontwikkelaar</a>, ik ben goed in het gebruiken
@@ -37,7 +37,7 @@
             <div class="w3-row">
                 <div class="w3-col m6 w3-center w3-padding-large">
                     <p><b><i class="fa fa-user w3-margin-right"></i>Olaf Schouten</b></p><br>
-                    <img src="img/img1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
+                    <img src="img/Olaf1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
                         width="500" height="333">
                 </div>
 
