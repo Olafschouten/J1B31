@@ -14,10 +14,10 @@ html {
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
     column-width: 33%;
-    height: 700px;
+    height: 650px;
 }
 
-.page-footer{
+.page-footer {
     background: lightgray;
 }
 
