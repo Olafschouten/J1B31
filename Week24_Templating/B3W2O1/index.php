@@ -31,7 +31,7 @@
             <p>Ik ben Olaf Schouten ik ben 20 jaar oud en zit op het da Vinci college in Gorinchem.
                 Ik ben nu bezig met een opleiding <a href="#">applicatieontwikkelaar</a>, ik ben goed in het gebruiken
                 van html, css en
-                bootstrap. Nu werk ik in de kas waar ik met planten <a href="#">werk</a>.
+                bootstrap. Als bij baantje werk ik in de kas waar ik met planten <a href="#">werk</a>.
 
             </p>
             <div class="w3-row">
