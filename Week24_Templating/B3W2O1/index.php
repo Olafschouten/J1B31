@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,7 +20,6 @@
     <?php include 'menu.php'?>
 
     <?php include 'carousel.php'?>
-
 
     <div class="container">
         <a name="aboutme"></a>
@@ -83,7 +81,8 @@
                                     <hr class="bg-light">
                                     <h5 class="text-center text-success"></h5>
 
-                                    <form action="mailto:olafschouten99@gmail.com" method="post" id="form-box" class="p-2">
+                                    <form action="mailto:olafschouten99@gmail.com" method="post" id="form-box"
+                                        class="p-2">
                                         <div class="form-group input-group">
                                             <div class="row">
                                                 <div class="col">
@@ -121,11 +120,13 @@
                                                 class="btn btn-primary btn-block" value="Send">
                                         </div>
                                     </form>
+
+                                    <?php include "contact.php" ?>
                                 </div>
                             </div>
 
                             <hr class="clearfix w-100 d-md-none pb-3">
-                            <div class="col-md-3 mb-md-0 mb-3">
+                            <div class="col-md-3 mb-md-0 mb-3" style="margin-top: 45px;">
                                 <h5 class="text-uppercase">Opdrachten</h5>
                                 <ul class="list-unstyled">
                                     <li>
