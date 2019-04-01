@@ -29,10 +29,10 @@
         return $data;
     }
 
-    $strings = ["kunnen", "persoon", "getal", "voorwerp", "eigenschap", "seigenschap", "overkomen"];
+    $vragen = ["vraag1", "vraag2", "vraag3", "vraag4", "vraag5", "vraag6", "vraag7"];
     $data = [];
     $dataErr = [];
-    foreach ($strings as $value) {
+    foreach ($vragen as $value) {
         $data[$value] = "";
         $dataErr[$value] = "";
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -51,59 +51,59 @@
             <form class="form-horizontal" action="formlier_onkunde.php" method="post">
 
                 <div class="form-group">
-                    <label class="col-sm-6" for="kunnen" style="margin-top: 5px">Wat zou je graag willen
+                    <label class="col-sm-6" for="vraag1" style="margin-top: 5px">Wat zou je graag willen
                         kunnen?</label>
-                    <span class="error">* <?php echo $dataErr["kunnen"]?></span>
+                    <span class="error">* <?php echo $dataErr["vraag1"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="kunnen" value="<?php echo $data["kunnen"] ?>">
+                        <input type="text" class="form-control" name="vraag1" value="<?php echo $data["vraag1"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6" for="persoon">Met welke persoon kun je goed opschieten??</label> <span
-                        class="error">* <?php echo $dataErr["persoon"]?></span>
+                    <label class="col-sm-6" for="vraag2">Met welke persoon kun je goed opschieten?</label> <span
+                        class="error">* <?php echo $dataErr["vraag2"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="persoon" name="persoon"
-                            value="<?php echo $data["persoon"] ?>">
+                        <input type="text" class="form-control" id="vraag2" name="vraag2"
+                            value="<?php echo $data["vraag2"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6" for="getal">Wat is je favoriete getal?</label> <span class="error">*
-                        <?php echo $dataErr["getal"]?></span>
+                    <label class="col-sm-6" for="vraag3">Wat is je favoriete vraag3?</label> <span class="error">*
+                        <?php echo $dataErr["vraag3"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="getal" name="getal"
-                            value="<?php echo $data["getal"] ?>">
+                        <input type="text" class="form-control" id="vraag3" name="vraag3"
+                            value="<?php echo $data["vraag3"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6" for="voorwerp">Wat heb je altijd bij je als je op vakantie gaat?</label>
-                    <span class="error">* <?php echo $dataErr["voorwerp"]?></span>
+                    <label class="col-sm-6" for="vraag4">Wat heb je altijd bij je als je op vakantie gaat?</label>
+                    <span class="error">* <?php echo $dataErr["vraag4"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="voorwerp" name="voorwerp"
-                            value="<?php echo $data["voorwerp"] ?>">
+                        <input type="text" class="form-control" id="vraag4" name="vraag4"
+                            value="<?php echo $data["vraag4"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6" for="eigenschap">Wat is je beste persoonlijke eigenschap</label> <span
-                        class="error">* <?php echo $dataErr["eigenschap"]?></span>
+                    <label class="col-sm-6" for="vraag5">Wat is je beste vraag2lijke eigenschap</label> <span
+                        class="error">* <?php echo $dataErr["vraag5"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="eigenschap" name="eigenschap"
-                            value="<?php echo $data["eigenschap"] ?>">
+                        <input type="text" class="form-control" id="vraag5" name="vraag5"
+                            value="<?php echo $data["vraag5"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6" for="seigenschap">Wat is je slechtste persoonlijke eigenschap?</label> <span
-                        class="error">* <?php echo $dataErr["seigenschap"]?></span>
+                    <label class="col-sm-6" for="vraag6">Wat is je slechtste vraag2lijke vraag5?</label> <span
+                        class="error">* <?php echo $dataErr["vraag6"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="seigenschap" name="seigenschap"
-                            value="<?php echo $data["seigenschap"] ?>">
+                        <input type="text" class="form-control" id="vraag6" name="vraag6"
+                            value="<?php echo $data["vraag6"] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6" for="overkomen">Wat is het ergste dat je kan overkomen?</label> <span
-                        class="error">* <?php echo $dataErr["overkomen"]?></span>
+                    <label class="col-sm-6" for="vraag7">Wat is het ergste dat je kan overkomen?</label> <span
+                        class="error">* <?php echo $dataErr["vraag7"]?></span>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="overkomen" name="overkomen"
-                            value="<?php echo $data["overkomen"] ?>">
+                        <input type="text" class="form-control" id="vraag7" name="vraag7"
+                            value="<?php echo $data["vraag7"] ?>">
                     </div>
                 </div>
 
@@ -117,7 +117,7 @@
             $data = [];
             $dataErr = [];
             $canProcess = true;
-            foreach ($strings as $value) {
+            foreach ($vragen as $value) {
                 if (empty($_POST[$value])) {
                     $canProcess = false;
                     break;
@@ -133,12 +133,12 @@
                 document.getElementById('result').style.display = 'block';
                 </script>";
             
-                echo "Er zij veel mensen die niet kunnen " . $data["kunnen"] . ". " .
-                    "Neem nou " . $data["persoon"] . ". " .
-                    "Zelfs met de hulp van een " . $data["voorwerp"] . " of zelfs tien kan " . $data["persoon"] . " niet " . $data["kunnen"] . ". " .
-                    "Dat heeft niet te maken met een gebrek aan " . $data["eigenschap"] . ", maar met een te veel aan " . $data["seigenschap"] . ". " .
-                    "Te veel " . $data["seigenschap"] . " leidt tot " . $data["overkomen"] . " en dat is niet goed als je wilt " . $data["kunnen"] . ". " .
-                    "Helaas voor " . $data["persoon"] . ".";
+                echo "Er zij veel mensen die niet kunnen " . $data["vraag1"] . ". " .
+                    "Neem nou " . $data["vraag2"] . ". " .
+                    "Zelfs met de hulp van een " . $data["vraag4"] . " of zelfs tien kan " . $data["vraag2"] . " niet " . $data["vraag1"] . ". " .
+                    "Dat heeft niet te maken met een gebrek aan " . $data["vraag5"] . ", maar met een te veel aan " . $data["vraag6"] . ". " .
+                    "Te veel " . $data["vraag6"] . " leidt tot " . $data["vraag7"] . " en dat is niet goed als je wilt " . $data["vraag1"] . ". " .
+                    "Helaas voor " . $data["vraag2"] . ".";
             }
         }
         ?>
