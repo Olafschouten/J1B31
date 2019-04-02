@@ -8,7 +8,7 @@
     <meta name="author" content="SitePoint">
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0″ />
 
-    <link rel="stylesheet" href="opdracht.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -18,9 +18,10 @@
     <div class="container">
         <div class="nav">
             <a href="opdracht.html">Er heerst paniek...</a>
-            <a href="opdracht_onkunde.html">Onkunde</a>
+            <a href="#">Onkunde</a>
         </div>
         <h2>Er heerst paniek...</h2>
+
         <?php
             echo "<p>", "Er heerst paniek in het koninkrijk ", $_POST["vraag3"], ". Koning ", $_POST["vraag6"], " is ten einde raad en als koning <br>", 
             $_POST["vraag6"], " ten einde raad is, dan roept hij zijn ten-einde-raadsheer ", $_POST["vraag2"], ".", "<br>";
@@ -33,6 +34,7 @@
             echo $_POST["vraag2"], ", je hebt helemaal gelijk! Wat zou ik doen als ik jou niet had. <br>";
             echo "Mij ", $_POST["vraag4"], ", Sire.", "</p>";
         ?>
+
         <div class="footer">
             <p>Olaf Schouten ©</p>
         </div>

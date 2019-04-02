@@ -2,24 +2,20 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Page Title</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>formulier_onkunde</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 
 <body>
     <h1>MAD LIBS</h1>
+
     <div class="container">
-        <div class="nav">
-            <a href="opdracht.html">Er heerst paniek...</a>
-            <a href="#">Onkunde</a>
-        </div>
+
+        <?php require 'menu.php' ?>
 
         <?php
     function changeInput($data) {
@@ -47,16 +43,16 @@
     ?>
 
         <h2>Onkunde</h2>
-        <div id="content">
-            <form class="form-horizontal" action="formlier_onkunde.php" method="post">
+        <div id="contentForm">
+            <form class="form-horizontal" action="formulier_onkunde.php" method="post">
 
                 <div class="form-group">
                     <label class="col-sm-6" for="vraag1" style="margin-top: 5px">Wat zou je graag willen
-                        kunnen?</label>
+                        kunnen?<input type="text" class="form-control" name="vraag1" value="<?php echo $data["vraag1"] ?>"></label>
                     <span class="error">* <?php echo $dataErr["vraag1"]?></span>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="vraag1" value="<?php echo $data["vraag1"] ?>">
-                    </div>
+                    <!-- <div class="col-sm-6">
+                        
+                    </div> -->
                 </div>
                 <div class="form-group">
                     <label class="col-sm-6" for="vraag2">Met welke persoon kun je goed opschieten?</label> <span
@@ -129,7 +125,7 @@
             if ($canProcess) {
                 echo
                 "<script>
-                document.getElementById('content').style.display = 'none';
+                document.getElementById('contentForm').style.display = 'none';
                 document.getElementById('result').style.display = 'block';
                 </script>";
             
@@ -144,9 +140,8 @@
         ?>
         </div>
 
-        <div class="footer">
-            <p>Olaf Schouten ©</p>
-        </div>
+        <?php require 'footer.php' ?>
+
     </div>
 </body>
 
