@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <h1>MAD LIBS</h1>
+    <div class="logo">
+        <h1>MAD LIBS</h1>
+    </div>
 
     <div class="container">
 
