@@ -16,14 +16,34 @@
     </div>
 
     <div class="container">
-        <div class="navbar">
-            <a href="#">Er heerst paniek...</a>
-            <a href="#">Onkunde</a>
-        </div>
+        <?php
+            require 'menu.php';
+        ?>
 
         <?php
             require "connect.php";
+
         ?>
+
+        <div class="container">
+            <div class="row">
+                <?php
+                $result = getAllGames();
+                foreach($result as $row){
+                ?>
+                <div id="item<?php echo $row['id']; ?>" class="col-md-2">
+                    <div class="thumbnail">
+                        <a href="test.php?id=<?php echo $row['id'] ?>"><img class="images"
+                                <?php echo '<img src= "img/'.$row['image'].'"/>'?></a>
+                                <p><?php echo "<br>". $row["name"] . "<br>";  ?></p>
+                    </div>
+                </div>
+                <?php
+                }
+                ?>
+
+            </div>
+        </div>
 
         <?php
             require "footer.php";

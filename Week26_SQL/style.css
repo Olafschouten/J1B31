@@ -2,7 +2,7 @@ body {
     background-color: rgb(80, 80, 80);
 }
 
-p {
+form>p {
     padding-left: 20px;
 }
 
@@ -77,23 +77,15 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.thumbnail>p {
+    text-align: center;
+}
 
 .images {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
+}
+
+img {
+    margin: 0 auto;
 }

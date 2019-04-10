@@ -11,4 +11,4 @@
 
 <h1><?php echo $result["name"]; ?></h1>
 <p><?php echo $result["description"]; ?></p>
-<img src="img/<?php echo $result["image"]; ?>"> />
+<img src="img/<?php echo $result["image"]; ?>">
