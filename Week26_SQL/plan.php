@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
     <meta charset="utf-8">
@@ -17,55 +17,63 @@
 
     <div class="container">
         <?php
-            include 'menu.php';
+            require 'menu.php';       
 
             require "connect.php";
+
+            $data = convertPost();
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $error = controle($data);
+                if (count($error) == 0) {
+
+                    $fields = ['game_name', 'host_name', 'players', 'time_start', 'time_end'];
+                    $cleanFields = [];
+
+                    foreach ($fields as $field) {
+                        $cleanFields[$field] = changeInput($_POST[$field]);
+                    }
+                    
+                    insertPlanning($cleanFields);
+                    header("Location: overzicht.php");
+                    exit();
+                }
+            }  
         ?>
 
-        <form action="test.php" method="POST">
-            <h2>Game inplannen..</h2>
+        <form method="post">
+            <h2>Game inplannen</h2>
 
-            <p>game name <input type="text" name="gameName" placeholder="" list="games" required></p>
+            <p>Game naam
+                <select name="game_name" class="games-select">
+                    <?php
+                        $conn = databaseConnect();
+						$sql = $conn->prepare("SELECT name FROM games");
+						$sql->execute();
+						$results = $sql->fetchall();
+						foreach ($results as $row) {
+							echo "<option value='".$row['name']."'>".$row['name']."</option>";
+                        }
+                        
+                        
+					?>
+                </select>
+            </p>
 
-            <datalist id="games">
-                <option value="7 Wonders">
-                <option value="10min Kraak">
-                <option value="Camel Up">
-                <option value="City Of Horror">
-                <option value="Climbers">
-                <option value="Codenames">
-                <option value="Concept">
-                <option value="Counterfeiters">
-                <option value="Dale Of Merchants">
-                <option value="Dixit">
-                <option value="Downforce">
-                <option value="Dragon Flagon">
-                <option value="Fantasy Realms">
-                <option value="Ghost Finding Treasure Hunters">
-                <option value="Gizmos">
-                <option value="Jhon">
-                <option value="Keep Talking And Nobody Explodes">
-                <option value="Lemming Mafias">
-                <option value="Micropolis">
-                <option value="Misterium">
-                <option value="Notalone">
-                <option value="Pandemic">
-            </datalist>
+            <p>Host <input type="text" name="host_name" value="<?php echo $data["host_name"];?>">*
+                <?php echo $error["host_name"]?></p>
 
+            <p>Spelers <input type="number" min=2 name="players" value="<?php echo $data["players"];?>">*
+                <?php echo $error["players"]?></p>
 
+            <p>Start tijd <input type="time" name="time_start"
+                    value="<?php echo $data["time_start"];?>">* <?php echo $error["time_start"]?></p>
 
-            <p>host <input type="text" name="vraag2" placeholder="" required></p>
+            <p>Eind tijd <input type="time" name="time_end" value="<?php echo $data["time_end"];?>">*
+                <?php echo $error["time_end"]?></p>
 
-            <p>players <input type="number" min=2 name="vraag3" placeholder="" required></p>
-
-            <p>start time <input type="time" name="vraag4" placeholder="" required></p>
-
-            <p>end time <input type="time" name="vraag5" placeholder="" required></p>
-
-            <input type="submit" name='submit'>
+            <input class="btn btn-secondary" type="submit" name="submit" value="Verzenden">
         </form>
-
-
 
         <?php
             require "footer.php";

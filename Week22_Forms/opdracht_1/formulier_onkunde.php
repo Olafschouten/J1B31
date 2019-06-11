@@ -27,18 +27,17 @@
         return $data;
     }
 
-    $vragen = ["vraag1", "vraag2", "vraag3", "vraag4", "vraag5", "vraag6", "vraag7"];
-    $data = [];
-    $dataErr = [];
-    foreach ($vragen as $value) {
-        $data[$value] = "";
-        $dataErr[$value] = "";
+    $data;
+    $dataErr;
+    $canProcess = true;
+    foreach ($_POST as $key => $value) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (empty($_POST[$value])) {
-                $dataErr[$value] = "Dit veld is verplicht";
+            if (empty($value)) {
+                $canProcess = false;
+                $dataErr[$key] = "Dit veld is verplicht";
             }
             else {
-                $data[$value] = changeInput($_POST[$value]);
+                $data[$key] = changeInput($value);
             }
         }
     }
@@ -49,47 +48,47 @@
             <form class="form-horizontal" action="formulier_onkunde.php" method="post">
 
                 <div class="form-group">
-                    <div class="label">Wat zou je graag willen kunnen? <input type="text" name="vraag1" value="<?php echo $data["vraag1"] ?>"> <span>* <?php echo $dataErr["vraag1"]?></span>
-                        
+                    <div class="label">Wat zou je graag willen kunnen? <input type="text" name="vraag1"
+                            value="<?php echo $data["vraag1"] ?>"> <span>* <?php echo $dataErr["vraag1"]?></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="label">Met welke persoon kun je goed opschieten? <input type="text" name="vraag2" value="<?php echo $data["vraag2"] ?>"> <span>* <?php echo $dataErr["vraag2"]?></span>
-                        
+                    <div class="label">Met welke persoon kun je goed opschieten? <input type="text" name="vraag2"
+                            value="<?php echo $data["vraag2"] ?>"> <span>* <?php echo $dataErr["vraag2"]?></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="label">Wat is je favoriete getal? <input type="text" name="vraag3" value="<?php echo $data["vraag3"] ?>"> <span>* <?php echo $dataErr["vraag3"]?></span>
-                        
+                    <div class="label">Wat is je favoriete getal? <input type="text" name="vraag3"
+                            value="<?php echo $data["vraag3"] ?>"> <span>* <?php echo $dataErr["vraag3"]?></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="label">Wat heb je altijd bij je als je op vakantie gaat? <input type="text" name="vraag4" value="<?php echo $data["vraag4"] ?>"> <span>* <?php echo $dataErr["vraag4"]?></span>
-                        
+                    <div class="label">Wat heb je altijd bij je als je op vakantie gaat? <input type="text"
+                            name="vraag4" value="<?php echo $data["vraag4"] ?>"> <span>*
+                            <?php echo $dataErr["vraag4"]?></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="label">Wat is je beste persoonlijke eigenschap? <input type="text" name="vraag5" value="<?php echo $data["vraag5"] ?>"> <span>* <?php echo $dataErr["vraag5"]?></span>
-                        
+                    <div class="label">Wat is je beste persoonlijke eigenschap? <input type="text" name="vraag5"
+                            value="<?php echo $data["vraag5"] ?>"> <span>* <?php echo $dataErr["vraag5"]?></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="label">Wat is je slechtste persoonlijke eigenschap? <input type="text" name="vraag6" value="<?php echo $data["vraag6"] ?>"> <span>* <?php echo $dataErr["vraag6"]?></span>
-                        
+                    <div class="label">Wat is je slechtste persoonlijke eigenschap? <input type="text" name="vraag6"
+                            value="<?php echo $data["vraag6"] ?>"> <span>* <?php echo $dataErr["vraag6"]?></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="label">Wat is het ergste dat je kan overkomen? <input type="text" name="vraag7" value="<?php echo $data["vraag7"] ?>"> <span>* <?php echo $dataErr["vraag7"]?></span>
-                        
+                    <div class="label">Wat is het ergste dat je kan overkomen? <input type="text" name="vraag7"
+                            value="<?php echo $data["vraag7"] ?>"> <span>* <?php echo $dataErr["vraag7"]?></span>
                     </div>
                 </div>
-
 
                 <input type="submit" id="submit">
             </form>
@@ -98,18 +97,6 @@
         <div id="result">
             <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $data = [];
-            $dataErr = [];
-            $canProcess = true;
-            foreach ($vragen as $value) {
-                if (empty($_POST[$value])) {
-                    $canProcess = false;
-                    break;
-                }
-                else {
-                    $data[$value] = changeInput($_POST[$value]);
-                }
-            }
             if ($canProcess) {
                 echo
                 "<script>

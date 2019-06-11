@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
     <meta charset="utf-8">
@@ -18,14 +18,14 @@
     <div class="container">
         <?php
             require 'menu.php';
-        ?>
 
-        <?php
             require "connect.php";
 
+            require "getgamebyid.php";
         ?>
 
         <div class="container">
+        <br>
             <div class="row">
                 <?php
                 $result = getAllGames();
@@ -33,9 +33,9 @@
                 ?>
                 <div id="item<?php echo $row['id']; ?>" class="col-md-2">
                     <div class="thumbnail">
-                        <a href="test.php?id=<?php echo $row['id'] ?>"><img class="images"
-                                <?php echo '<img src= "img/'.$row['image'].'"/>'?></a>
-                                <p><?php echo "<br>". $row["name"] . "<br>";  ?></p>
+                        <a href="gameviewer.php?id=<?php echo $row['id'] ?>">
+                            <img class="images"<?php echo ' alt="img" src= "img/'.$row['image'].'"/'?>></a>
+                            <?php echo "<br>". $row["name"] . "<br>";  ?>   
                     </div>
                 </div>
                 <?php

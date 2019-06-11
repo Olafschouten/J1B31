@@ -11,7 +11,11 @@ p>input {
     margin-right: 20px;
 }
 
-.form-group>div>input {
+.row {
+    margin: 0;
+}
+
+.form-group>div>input, .games-select {
     float: right;
     margin-right: 20px;
 }
@@ -37,8 +41,6 @@ form>input {
 }
 
 .container {
-    height: auto;
-    width: 1000px;
     background-color: white;
     margin: 0 auto;
     padding: 0px;
@@ -76,16 +78,35 @@ footer {
     color: white;
 }
 
+.description {
+    margin: 20px;
+}
+
+.vid {
+    float: right;
+}
 
 .thumbnail>p {
     text-align: center;
 }
 
 .images {
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
 }
 
 img {
     margin: 0 auto;
+}
+
+.gamecontainer {
+    border-style: solid;
+    border-width: 1px;
+    margin: 5px;
+    padding: 10px;
+}
+
+iframe{
+    width: 560px;
+    height: 315px;
 }
