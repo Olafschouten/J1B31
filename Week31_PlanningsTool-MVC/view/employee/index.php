@@ -5,7 +5,7 @@
 	?>
     <div id="item<?php echo $row['id']; ?>" class="col-md-2">
         <div class="thumbnail">
-            <a href="<?=URL?>employee/gameviewer/<?php echo $row["id"] ?>">
+            <a href="gameviewer.php?id=<?php echo $row['id'] ?>">
                 <img class="images"
                     src="<?php echo  URL .'/' . URL_PUBLIC_FOLDER ?>/img/<?php echo $row['image']; ?>" />
             </a>

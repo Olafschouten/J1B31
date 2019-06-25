@@ -5,12 +5,9 @@ body {
     background-color: rgb(83, 83, 83);
 }
 
+
 img{
     width: 100%;
-}
-
-.image {
-    width: 200px;
 }
 
 ul>li>span{
