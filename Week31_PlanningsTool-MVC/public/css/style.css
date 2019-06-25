@@ -46,3 +46,7 @@ footer{
 span.error{
     color:red;
 }
+
+.image {
+    width: 200px;
+}

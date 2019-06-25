@@ -1,4 +1,4 @@
-<h1>Voeg een medewerker toe</h1>
+<h1>Voeg een planning toe</h1>
 <form name="create" method="post" action="store">
     <h2>Game inplannen</h2>
 

@@ -1,6 +1,5 @@
 <h1>Persoon wijzigen</h1>
-<form name="update" method="post" action="<?=URL?>employee/update/<? echo $data["userInput"]['id'] ?>">
-    <input type="text" name="id" value="<?= $data["userInput"]['id'] ?>" />
+<form name="update" method="post" action="<?=URL?>planning/update/<? echo $data["userInput"]['id'] ?>">
     <div class="userInput">
 
         <h2>Edit spel</h2>

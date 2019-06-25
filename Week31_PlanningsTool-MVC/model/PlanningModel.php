@@ -1,26 +1,4 @@
 <?php
-
-function getAllGames()
-{
-    $conn = openDatabaseConnection();
-    $stmt = $conn->prepare("SELECT * FROM games");
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    $conn = null;
-    return $result;
-}
-
-function getGame($id)
-{
-    $conn=openDatabaseConnection();
-    $stmt = $conn->prepare("SELECT * FROM games WHERE id = :id");
-    $stmt->bindParam(":id", $id);
-    $stmt->execute();
-    $result = $stmt->fetch();
-    $conn = null;
-    return $result;
-}
-
 function createUserInput($data)
 {
     try {
@@ -39,7 +17,7 @@ function createUserInput($data)
 function getAllUserInputs()
 {
     $conn = openDatabaseConnection();
-    $stmt = $conn->prepare("SELECT * FROM user_input");
+    $stmt = $conn->prepare("SELECT * FROM user_input ORDER BY time_start ASC");
     $stmt->execute();
     $result = $stmt->fetchAll();
     $conn = null;
@@ -56,11 +34,11 @@ function getUserInput($id)
     return $result;
 }
 
-function updateUserInput($data)
+function updateUserInput($data, $id)
 {
     $conn = openDatabaseConnection();
     $sql = $conn->prepare("UPDATE `user_input` SET game_name = :game_name, host_name = :host_name, players = :players, time_start = :time_start, time_end = :time_end WHERE id = :id");
-    $sql->execute([':id'=>$data['id'], ':game_name'=>$data['game_name'],':host_name'=>$data['host_name'],':players'=>$data['players'],':time_start'=>$data['time_start'],':time_end'=>$data['time_end']]);
+    $sql->execute([':id'=>$id, ':game_name'=>$data['game_name'],':host_name'=>$data['host_name'],':players'=>$data['players'],':time_start'=>$data['time_start'],':time_end'=>$data['time_end']]);
     $conn = null;
 }
 

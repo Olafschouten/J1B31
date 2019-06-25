@@ -1,15 +1,17 @@
 <?php
-require(ROOT . "model/EmployeeModel.php");
+require(ROOT . "model/PlanningModel.php");
+
+require(ROOT . "model/GamesModel.php");
 
 function index()
 {
-    $games = getAllGames();
-    render('employee/index', $games);
+    $data = getAllUserInputs();
+    render('planning/index', $data);
 }
 
 function create()
 {
-    render('employee/create', ["games" => getAllGames()]);
+    render('planning/create', ["games" => getAllGames()]);
 }
 
 function store()
@@ -23,19 +25,13 @@ function store()
     }
     else
     {
-        render("employee/create", ["userInput" => $validation["result"], "error" => $validation["error"], "games" => getAllGames()]);
+        render("planning/create", ["userInput" => $validation["result"], "error" => $validation["error"], "games" => getAllGames()]);
     }
-}
-
-function overzicht()
-{
-    $userInput = getAllUserInputs();
-    render('employee/overzicht', $userInput);
 }
 
 function edit($id)
 {
-    render('employee/update', ["games" => getAllGames(), "userInput" => getUserInput($id)]);
+    render('planning/update', ["games" => getAllGames(), "userInput" => getUserInput($id)]);
 }
 
 function update($id)
@@ -44,19 +40,18 @@ function update($id)
 
     if ($validation["succes"])
     {
-        updateUserInput($validation["result"]);
+        updateUserInput($validation["result"], $id);
         header("location: ../index");
-        // var_dump($validation);
     }
     else {
-        render("employee/update", ["error" => $validation["error"], "games" => getAllGames(), "userInput" => $validation["result"]]);
+        render("planning/update", ["error" => $validation["error"], "games" => getAllGames(), "userInput" => $validation["result"]]);
     }
 }
 
 function delete($id)
 {
-    $idOfUserInput = getUserInput($id);
-    render('employee/delete', $idOfUserInput);
+    $userInput = getUserInput($id);
+    render('planning/delete', $userInput);
 }
 
 function destroy($id)
